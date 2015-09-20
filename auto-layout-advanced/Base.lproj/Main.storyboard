@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -32,9 +33,6 @@
                                     <constraint firstAttribute="height" constant="128" id="Dpr-vN-u0I"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rocket 2" translatesAutoresizingMaskIntoConstraints="NO" id="NC2-o3-OEx">
-                                <rect key="frame" x="180" y="373" width="240" height="128"/>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rLX-qc-erI">
                                 <rect key="frame" x="20" y="156" width="276" height="128"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -42,18 +40,27 @@
                                     <constraint firstAttribute="height" constant="128" id="ZtD-Mm-0Nq"/>
                                 </constraints>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="rocket 2" translatesAutoresizingMaskIntoConstraints="NO" id="NC2-o3-OEx">
+                                <rect key="frame" x="65" y="344" width="471" height="236"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NC2-o3-OEx" secondAttribute="height" multiplier="471:236" id="4Od-RK-kN0"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="K7u-Tq-sJL" firstAttribute="top" secondItem="0Te-vi-PJw" secondAttribute="bottom" constant="8" id="00j-XP-5VG"/>
+                            <constraint firstItem="NC2-o3-OEx" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1.5" id="9sY-A6-Cvk"/>
                             <constraint firstItem="0Te-vi-PJw" firstAttribute="width" secondItem="K7u-Tq-sJL" secondAttribute="width" multiplier="2" constant="8" id="A2l-hn-epq"/>
                             <constraint firstItem="rLX-qc-erI" firstAttribute="leading" secondItem="0Te-vi-PJw" secondAttribute="leading" id="GE6-dk-cGZ"/>
                             <constraint firstItem="rLX-qc-erI" firstAttribute="top" secondItem="0Te-vi-PJw" secondAttribute="bottom" constant="8" id="OdT-Zl-oVl"/>
                             <constraint firstItem="0Te-vi-PJw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Qdg-Ud-t4J"/>
                             <constraint firstItem="K7u-Tq-sJL" firstAttribute="trailing" secondItem="0Te-vi-PJw" secondAttribute="trailing" id="eRn-1k-Fwt"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NC2-o3-OEx" secondAttribute="bottom" constant="20" id="idE-JD-b3F"/>
                             <constraint firstItem="0Te-vi-PJw" firstAttribute="width" secondItem="rLX-qc-erI" secondAttribute="width" multiplier="2" constant="8" id="jtb-7r-OhX"/>
                             <constraint firstItem="0Te-vi-PJw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="mh1-LV-esp"/>
                             <constraint firstItem="0Te-vi-PJw" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="rVm-Uy-Xyn"/>
+                            <constraint firstItem="NC2-o3-OEx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.5" id="sEW-40-x0a"/>
                         </constraints>
                     </view>
                 </viewController>
